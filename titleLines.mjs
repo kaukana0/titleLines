@@ -26,26 +26,34 @@ template.innerHTML += `<style>
 
 class MyElement extends HTMLElement {
 
-	#_shadow
-
 	#$(elementId) {
-		return this.#_shadow.getElementById(elementId)
+		return this.shadowRoot.getElementById(elementId)
 	}
 
 	constructor() {
 		super()
-		this.#_shadow = this.attachShadow({ mode: 'open' })
-		this.#_shadow.appendChild(template.content.cloneNode(true))
-	}
-
-	connectedCallback() {
-        this.#$("main").innerText = this.getAttribute('mainText');
-        this.#$("sub").innerText = this.getAttribute('subText');
+		this.attachShadow({ mode: 'open' })
+		this.shadowRoot.appendChild(template.content.cloneNode(true))
 	}
 
 	static get observedAttributes() {
-		return ['mainText', 'subText'];
+		return ['maintext', 'subtext'];
 	}
+
+	attributeChangedCallback(name, oldVal, newVal) {
+		if (oldVal === newVal) { return }
+		if (name === 'maintext') { this.mainText = newVal }
+		if (name === 'subtext') { this.subText = newVal }
+	  }
+	  
+	connectedCallback() {
+		this.mainText = this.getAttribute('mainText');
+		this.subText = this.getAttribute('subText');
+	}
+		
+	set mainText(v) { this.#$("main").innerText = v; }
+	set subText(v) { this.#$("sub").innerText = v; }
+
 }
 
 window.customElements.define('title-lines', MyElement)
