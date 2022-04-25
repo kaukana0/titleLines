@@ -14,13 +14,16 @@ template.innerHTML += `<style>
 	color: #044AA3;
 	font-weight: bold;
 	font-size: 1.2rem;
+    text-align:center;
 }
 
 #sub {
 	color: #044AA3;
 	font-weight: normal;
 	font-size: 1rem;
+    text-align:center;
 }
+
 </style>`
 
 
