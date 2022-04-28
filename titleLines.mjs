@@ -13,7 +13,7 @@ template.innerHTML += `<style>
 	margin-top: 10px;
 	color: #044AA3;
 	font-weight: bold;
-	font-size: 1.2rem;
+	font-size: 2rem;
     text-align:center;
 }
 
