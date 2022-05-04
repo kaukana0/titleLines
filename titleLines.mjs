@@ -27,7 +27,7 @@ template.innerHTML += `<style>
 </style>`
 
 
-class MyElement extends HTMLElement {
+class Element extends HTMLElement {
 
 	#$(elementId) {
 		return this.shadowRoot.getElementById(elementId)
@@ -59,4 +59,4 @@ class MyElement extends HTMLElement {
 
 }
 
-window.customElements.define('title-lines', MyElement)
+window.customElements.define('title-lines', Element)
