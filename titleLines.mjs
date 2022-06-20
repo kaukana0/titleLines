@@ -4,13 +4,12 @@
 const template = document.createElement('template');
 
 template.innerHTML = `
-<div id="main" translate="title"></div>
-<div id="sub" translate="subtitle"></div>
+<h1 id="main" translate="title"></h1>
+<h2 id="sub" translate="subtitle"></h2>
 `
 
 template.innerHTML += `<style>
 #main {
-	margin-top: 10px;
 	color: #044AA3;
 	font-weight: bold;
 	font-size: 2rem;
@@ -20,7 +19,7 @@ template.innerHTML += `<style>
 #sub {
 	color: #044AA3;
 	font-weight: normal;
-	font-size: 1rem;
+	font-size: 1.4rem;
     text-align:center;
 }
 
