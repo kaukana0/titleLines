@@ -14,6 +14,8 @@ template.innerHTML += `<style>
 	font-weight: bold;
 	font-size: 2rem;
     text-align:center;
+	margin: 0px;
+	margin-bottom: 0.3rem;
 }
 
 #sub {
@@ -21,6 +23,7 @@ template.innerHTML += `<style>
 	font-weight: normal;
 	font-size: 1.4rem;
     text-align:center;
+	margin: 0px;
 }
 
 </style>`
